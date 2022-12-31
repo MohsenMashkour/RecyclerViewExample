@@ -1,5 +1,6 @@
 package com.mkrdeveloper.recyclerviewexample
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,6 +34,14 @@ class RecAadapter(private val pizzaList : ArrayList<Pizza>) : RecyclerView.Adapt
 
         val cont = holder.constraint_row.context
         holder.constraint_row.setOnClickListener {
+            val intent = Intent(it.context, SecondActivity::class.java)
+
+            intent.putExtra("image",currentItem.imageTitle)
+            intent.putExtra("title",currentItem.name)
+            intent.putExtra("ingredients",currentItem.ingredients)
+
+            it.context.startActivity(intent)
+
             Toast.makeText(cont, "the item ${currentItem.name} is clicked", Toast.LENGTH_SHORT).show()
         }
 
