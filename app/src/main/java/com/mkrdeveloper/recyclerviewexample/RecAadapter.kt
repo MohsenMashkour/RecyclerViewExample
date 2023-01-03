@@ -4,9 +4,11 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 
@@ -18,6 +20,7 @@ class RecAadapter(private val pizzaList : ArrayList<Pizza>) : RecyclerView.Adapt
         val tvName: TextView = itemView.findViewById(R.id.tvName)
         val tvIng: TextView = itemView.findViewById(R.id.tvIng)
         val constraint_row : ConstraintLayout = itemView.findViewById(R.id.constraint_row)
+        val cardView : CardView = itemView.findViewById(R.id.cardView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -51,6 +54,10 @@ class RecAadapter(private val pizzaList : ArrayList<Pizza>) : RecyclerView.Adapt
 
             return@OnLongClickListener true
         })
+
+
+        holder.cardView.startAnimation(AnimationUtils.loadAnimation(holder.cardView.context, R.anim.fall_down))
+
     }
 
     override fun getItemCount(): Int {

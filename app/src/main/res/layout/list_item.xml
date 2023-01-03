@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:elevation="8dp"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="10dp"
+    android:id="@+id/cardView">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_row"

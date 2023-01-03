@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="pizza1"
-        android:textSize="25sp"
+        android:textSize="45sp"
         app:layout_constraintStart_toStartOf="@+id/img_second"
         app:layout_constraintTop_toBottomOf="@+id/img_second" />
 
@@ -31,6 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:textSize="35sp"
         android:text="ingredients"
         app:layout_constraintStart_toStartOf="@+id/tv_title_secondActivity"
         app:layout_constraintTop_toBottomOf="@+id/tv_title_secondActivity" />
