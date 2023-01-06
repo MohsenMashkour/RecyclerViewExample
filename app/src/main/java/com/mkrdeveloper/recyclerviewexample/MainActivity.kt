@@ -2,6 +2,7 @@ package com.mkrdeveloper.recyclerviewexample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -102,7 +103,9 @@ class MainActivity : AppCompatActivity() {
 
 
         recView = findViewById(R.id.recView)
-        recView.layoutManager = LinearLayoutManager(this)
+        // the type of the recyclerView. linear or grid
+        recView.layoutManager = GridLayoutManager(this,3)
+
         recView.setHasFixedSize(true)
 
 

@@ -24,7 +24,7 @@ class RecAadapter(private val pizzaList : ArrayList<Pizza>) : RecyclerView.Adapt
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.grid_item, parent, false)
         return ViewHolder(itemView)
     }
 
@@ -56,7 +56,7 @@ class RecAadapter(private val pizzaList : ArrayList<Pizza>) : RecyclerView.Adapt
         })
 
 
-        holder.cardView.startAnimation(AnimationUtils.loadAnimation(holder.cardView.context, R.anim.fall_down))
+        holder.cardView.startAnimation(AnimationUtils.loadAnimation(holder.cardView.context, R.anim.scale_up))
 
     }
 
